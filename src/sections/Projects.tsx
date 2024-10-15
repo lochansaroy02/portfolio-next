@@ -9,6 +9,8 @@ import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 
 
 import Image from "next/image";
+import { SectionHeaders } from "@/components/SectionHeaders";
+import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -49,29 +51,26 @@ const portfolioProjects = [
   },
 ];
 
+const sectionHeaders = {
+  title: "Real-world Projects",
+  eyebrow: "Featured Projects",
+  description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+}
+
 export const ProjectsSection = () => {
   return (
     <section className="pb-16  lg:py-24  ">
 
 
       <div className="container">
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text  ">Real-world Projects</p>
-        </div>
-        <h2 className="font-serif text-3xl md:text-5xl  text-center mt-6  ">Featured Projects</h2>
-        <p className="text-center md:text-lg max-w-md text-white/60 mt-4 lg:text-xl  mx-auto"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+        <SectionHeaders title={sectionHeaders.title} eyebrow={sectionHeaders.eyebrow} description={sectionHeaders.description} />
 
         {/* card wrappeer */}
         <div className="flex flex-col mt-10 md:mt-20  gap-14 ">
           {
             portfolioProjects.map((projects, index) => (
-              <div key={index} className="bg-neutral-800 rounded-3xl relative  z-0 overflow-hidden after:z-10  after:content-[''] after:absolute after:inset-0  after:outline-2  after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20  px-8 pt-8  after:pointer-events-none    lg:pt-16 lg:px-20  ">
-                <div className="absolute inset-0 -z-10 opacity-5 md:pt-12  md:px-10   " style={{
-                  backgroundImage: `url(${GrainImage.src})`,
-                }}>
-                </div>
-
-
+              <Card key={index} className=" px-8 pt-8 md:pt-1 pb-0  md:px-10   lg:pt-16 lg:px-20  ">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16 ">
 
                   <div className="lg:pb-16  ">
@@ -115,7 +114,7 @@ export const ProjectsSection = () => {
                   </div>
 
                 </div>
-              </div>
+              </Card>
             ))
           }
         </div>
