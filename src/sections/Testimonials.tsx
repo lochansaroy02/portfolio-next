@@ -56,12 +56,12 @@ export const TestimonialsSection = () => {
 
         <SectionHeaders title={sectionHeaders.title} eyebrow={sectionHeaders.eyebrow} description={sectionHeaders.description} />
 
-        <div className="mt-16 lg:mt-24  flex overflow-x-clip  [mask-image: linear-gradient( to_right,transparent, black_10%, black_90%, transparent)] ">
+        <div className="mt-16 lg:mt-24  flex overflow-x-clip  [mask-image: linear-gradient( to_right,_transparent, _black_10%, _black_90%, _transparent)] ">
           <div className="flex-none gap-8  flex  ">
             {
               testimonials.map((testimonial, index) => (
 
-                <Card key={index} className="max-w-xs md:p-8 md:max-w-md  ">
+                <Card key={index} className="max-w-xs p-6 md:max-w-md   ">
                   <div className="flex gap-4 items-center ">
 
                     <div className="size-14 bg-neutral-700 inline-flex rounded-full  items-center justify-center  flex-shrink-0">
