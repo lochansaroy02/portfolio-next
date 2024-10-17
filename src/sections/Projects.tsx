@@ -1,6 +1,5 @@
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import GrainImage from "@/assets/images/grain.jpg";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 
 import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg';
@@ -8,9 +7,9 @@ import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 
 
 
-import Image from "next/image";
-import { SectionHeaders } from "@/components/SectionHeaders";
 import Card from "@/components/Card";
+import { SectionHeaders } from "@/components/SectionHeaders";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
@@ -67,13 +66,19 @@ export const ProjectsSection = () => {
         <SectionHeaders title={sectionHeaders.title} eyebrow={sectionHeaders.eyebrow} description={sectionHeaders.description} />
 
         {/* card wrappeer */}
-        <div className="flex flex-col mt-10 md:mt-20  gap-14 ">
+        <div className="flex flex-col mt-10 md:mt-20  gap-14 relative ">
           {
             portfolioProjects.map((projects, index) => (
-              <Card key={index} className=" px-8 pt-8 md:pt-1 pb-0  md:px-10   lg:pt-16 lg:px-20  ">
+              <Card
+                key={index}
+                className=" px-8 pt-8 md:pt-1 pb-0  md:px-10   lg:pt-16 lg:px-20  sticky top-12"
+                style={{
+                  top: `calc(64px + ${index * 20}px) `
+                }}
+              >
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16 ">
 
-                  <div className="lg:pb-16  ">
+                  <div className="lg:pb-16 ">
 
 
 
