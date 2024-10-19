@@ -5,9 +5,7 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import Card from "@/components/Card";
 import { SectionHeaders } from "@/components/SectionHeaders";
-
 import Image from "next/image";
-
 
 const testimonials = [
   {
@@ -46,51 +44,69 @@ const sectionHeaders = {
   title: "Testimonials",
   eyebrow: "What People Say",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-}
+};
 
 export const TestimonialsSection = () => {
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
+        <SectionHeaders
+          title={sectionHeaders.title}
+          eyebrow={sectionHeaders.eyebrow}
+          description={sectionHeaders.description}
+        />
 
+        <div
+          className="mt-12 lg:mt-24 flex overflow-x-hidden py-4"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
 
-        <SectionHeaders title={sectionHeaders.title} eyebrow={sectionHeaders.eyebrow} description={sectionHeaders.description} />
+          <div className="flex gap-8 pr-8 animate-move-left [animation-duration:30s] hover:[animation-play-state:paused]  " >
 
-        <div className="mt-12 lg:mt-24  flex overflow-x-clip py-4 -my-4  " style={{
-          maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-        }}>
-          <div className="flex-none gap-8  pr-8 flex  [animation-duration:90s] animate-move-left hover:[animation-play-state:paused] ">
-
-
-            {[...Array(2).fill(0).map((_, idx) => (
-              <div key={idx}>
-                {
-                  testimonials.map((testimonial, index) => (
-
-                    <Card key={index} className="max-w-xs p-6 md:max-w-md hover:-rotate-3  transition  duration-300 ">
-                      <div className="flex gap-4 items-center ">
-
-                        <div className="size-14 bg-neutral-700 inline-flex rounded-full  items-center justify-center  flex-shrink-0">
-                          <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
+            {[...Array(2).fill(0)].map((_, idx) => (
+              <div key={idx} className="flex  gap-8">
+                {testimonials.map((testimonial, index) => (
+                  <Card
+                    key={index}
+                    className=" md:w-[450px]  w-[300px] p-4  h-[300px] md:h-[300px]   hover:-rotate-3 transition duration-300"
+                  >
+                    <div className="p-4 md:pb-0  flex flex-col items-center lg:items-start md:items-start   ">
+                      <div className="flex gap-4 ">
+                        <div className="size-14 bg-neutral-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
+                          <Image
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            className=""
+                          />
                         </div>
-
-                        <div className=" " >
-                          <div className="font-semibold  ">  {testimonial.name}</div>
-                          <div className="text-sm text-white/40 ">{testimonial.position}</div>
+                        <div >
+                          <div className="font-semibold">{testimonial.name}</div>
+                          <div className="text-sm  text-white/40 ">
+                            {testimonial.position}
+                          </div>
                         </div>
-
                       </div>
-                      <p className="mt-4 md:mt-6  text-sm  md:text-base "> {testimonial.text}</p>
-                    </Card>
-                  ))}
+
+
+                      <div className=" py-4 mt-6    ">
+
+                        <p className="  text-sm md:text-base ">
+                          {testimonial.text}
+                        </p>
+                      </div>
+
+
+                    </div>
+                  </Card>
+                ))}
               </div>
-            ))]}
-
-
+            ))}
           </div>
         </div>
       </div>
-
-    </div >
+    </div>
   );
 };

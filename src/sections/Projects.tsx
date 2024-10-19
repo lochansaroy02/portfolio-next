@@ -57,22 +57,21 @@ const sectionHeaders = {
 export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
-      <div className="container">
+      <div className="container ">
         <SectionHeaders
           title={sectionHeaders.title}
           eyebrow={sectionHeaders.eyebrow}
           description={sectionHeaders.description}
         />
 
-        <div className="flex flex-col mt-10 md:mt-20 gap-14">
+        <div className="flex flex-col mt-10 md:mt-20 gap-14  ">
           {portfolioProjects.map((projects, index) => (
             <Card
               key={index}
-              className="px-8 pt-8 md:pt-1 pb-0 md:px-10 lg:pt-16 lg:px-20"
+              className="px-8 pt-8  pb-0 md:px-10 lg:pt-16 lg:px-20"
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                {/* Sticky Content */}
-                <div className="lg:pb-16 lg:relative">
+              <div className="lg:flex lg:gap-16 sticky ">
+                <div className="lg:flex-1 lg:pb-16 ">
                   <div className="sticky top-16">
                     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                       <span>{projects.company}</span>
@@ -107,7 +106,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Image Content */}
-                <div className="relative">
+                <div className="lg:flex-1 md:mt-12 ">
                   <Image
                     src={projects.image}
                     alt={projects.title}
@@ -115,9 +114,12 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
+
             </Card>
           ))}
         </div>
+
+
       </div>
     </section>
   );
