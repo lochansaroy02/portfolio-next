@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
 
 @layer base {
     .nav-item {
@@ -10,6 +13,10 @@
 
     .hero-ring {
         @apply absolute inset-0 border-2 border-neutral-300/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_80px_inset] shadow-neutral-300/5;
+    }
+
+    .nav-item-active {
+        @apply px-4 py-1.5 rounded-full bg-white/90 text-neutral-900 text-sm font-semibold hover:bg-white/70 hover:text-neutral-900 transition duration-300;
     }
 }
 

@@ -6,11 +6,14 @@ import grainImage from '@/assets/images/grain.jpg';
 import memojiIMage from '@/assets/images/memoji-computer.png';
 import HeroOrbit from '@/components/HeroOrbit';
 import Image from 'next/image';
-export const HeroSection = () => {
-  return <div className='py-28 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+import { ReactNode, Ref } from 'react';
+
+
+export const HeroSection = ({ id }: { id: string }) => {
+  return <div id={id} className='py-28 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
     <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'
       style={{
-        maskImage: "linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)"
+        maskImage: "linear-gradient(to bottom, transxparent, black 10%, black 70%, transparent)"
       }}>
       <div className='absolute inset-0 -z-30 opacity-5' style={{
         backgroundImage: `url(${grainImage.src})`,
@@ -82,8 +85,10 @@ export const HeroSection = () => {
 
       <div className='max-w-lg mx-auto'>
 
-        <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Lochan</h1>
-        <p className='mt-4 text-center text-white/60 md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus exercitationem veritatis inventore quas totam. Ex fuga nesciunt suscipit unde aliquid in consectetur tempora illum consequatur, ea commodi temporibus et a?</p>
+        <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>From Concept to Code, I Bring Your Ideas to Life</h1>
+        <p className='mt-4 text-center text-white/60 md:text-lg'>
+          Full-stack web development with cutting-edge technologies like MERN, designed to enhance user experience and drive growth.
+        </p>
 
       </div>
 

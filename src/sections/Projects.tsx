@@ -1,6 +1,8 @@
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import netflix from '@/assets/images/netflix.png';
+import foodhub from '@/assets/images/foodhub.png';
+import todo from '@/assets/images/todo.png';
 
 import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
@@ -13,38 +15,38 @@ const portfolioProjects = [
   {
     company: "Acme Corp",
     year: "2022",
-    title: "Dark Saas Landing Page",
+    title: "Todo App",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://todohive-vert.netlify.app/",
+    image: todo,
   },
   {
     company: "Innovative Co",
     year: "2021",
-    title: "Light Saas Landing Page",
+    title: "FoodHub",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: foodhub,
   },
   {
     company: "Quantum Dynamics",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Netflix GPT",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    image: netflix,
   },
 ];
 
@@ -54,9 +56,12 @@ const sectionHeaders = {
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
 };
 
-export const ProjectsSection = () => {
+
+
+
+export const ProjectsSection = ({ id }: { id: string }) => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id={id} className="pb-16 lg:py-24">
       <div className="container ">
         <SectionHeaders
           title={sectionHeaders.title}
@@ -74,9 +79,6 @@ export const ProjectsSection = () => {
                 <div className="lg:flex-1 lg:pb-16 ">
                   <div className="sticky top-16">
                     <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
-                      <span>{projects.company}</span>
-                      <span>&bull;</span>
-                      <span>{projects.year}</span>
                     </div>
 
                     <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
@@ -106,11 +108,11 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Image Content */}
-                <div className="lg:flex-1 md:mt-12 ">
+                <div className="lg:flex-1 md:mt-12 lg:rounded-lg ">
                   <Image
                     src={projects.image}
                     alt={projects.title}
-                    className="-mb-4 mt-8 md:mt md:-mt-0 lg:mt-4 lg:w-auto lg:absolute lg:h-full lg:max-w-none"
+                    className="-mb-4 lg:rounded-xl   mt-8 md:mt md:-mt-0 lg:mt-4 lg:w-auto lg:absolute lg:h-full lg:max-w-none"
                   />
                 </div>
               </div>

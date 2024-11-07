@@ -65,16 +65,16 @@ const hobbies = [
 
 ]
 
-export const AboutSection = () => {
+export const AboutSection = ({ id }: { id: string }) => {
 
   const ref = useRef(null);
   return (
-    <div className="py-20  lg:py-28  ">
+    <div id={id} className="py-20  lg:py-28  ">
       <div className="container">
 
         <SectionHeaders eyebrow="About Me" title="A Glimpse into my world" description="Learn more about who I am, What I do" />
 
-        <div className="mt-20 flex-col flex gap-8 ">
+        <div className="mt-20  flex-col flex gap-8 ">
 
           <div className="md:grid md:grid-cols-2  md:w-auto md:gap-8 grid grid-cols-1  gap-8">
 
@@ -95,7 +95,7 @@ export const AboutSection = () => {
           </div>
 
 
-          <div  className="md:grid-cols-2  md:grid grid grid-cols-1 gap-8  ">
+          <div className="md:grid-cols-2  md:grid grid grid-cols-1 gap-8  ">
             <Card className="h-[320px] p-0  flex flex-col md:col-span-2 ">
               <CardHeader title="Hobbies" description="My favorite hobbies" className="px-6 py-6  " />
               <div ref={ref} className=" grid grid-cols-3 gap-1  px-6  py-8 ">
