@@ -15,10 +15,10 @@ const ToolboxItems = ({ items, className, itemWrapperClassName }: {
             <div className={twMerge(itemWrapperClassName, "flex-none  flex py-0.5   pr-6  ")}>
                 {
                     [...new Array(2)].fill(0).map((_, idx) => (
-                        <div key={idx} className="">
+                        <div key={idx} className=" ">
                             {
                                 items.map((item, index) => (
-                                    <div key={index} className="inline-flex  items-center  gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg  ">
+                                    <div key={index} className="inline-flex mx-2 bg-white/10 items-center  gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg  ">
 
                                         <TechIcon component={item.iconType} />
                                         <span className="font-semibold ">{item.title}</span>

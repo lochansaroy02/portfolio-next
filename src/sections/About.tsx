@@ -1,20 +1,20 @@
 'use client';
 
-import bookImage from "@/assets/images/book-cover.png";
-import Card from "@/components/Card";
-import { SectionHeaders } from "@/components/SectionHeaders";
-import Image from "next/image";
-
 import CssIcon from "@/assets/icons/css3.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import Card from "@/components/Card";
 import CardHeader from "@/components/CardHeader";
+import { SectionHeaders } from "@/components/SectionHeaders";
 import ToolboxItems from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
+import { FaEthereum, FaNodeJs, FaReact } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 const toolboxItem = [
   {
     title: 'javascript',
@@ -32,6 +32,22 @@ const toolboxItem = [
     title: 'Github',
     iconType: GithubIcon
   },
+  {
+    title: 'React',
+    iconType: FaReact
+  },
+  {
+    title: 'Next.js',
+    iconType: SiNextdotjs
+  },
+  {
+    title: 'Node.js',
+    iconType: FaNodeJs
+  },
+  {
+    title: 'Ethereum',
+    iconType: FaEthereum
+  }
 ]
 
 const hobbies = [
@@ -65,9 +81,14 @@ const hobbies = [
 
 ]
 
+
 export const AboutSection = ({ id }: { id: string }) => {
+  
 
   const ref = useRef(null);
+
+
+
   return (
     <div id={id} className="py-20  lg:py-28  ">
       <div className="container">
@@ -76,24 +97,24 @@ export const AboutSection = ({ id }: { id: string }) => {
 
         <div className="mt-20  flex-col flex gap-8 ">
 
-          <div className="md:grid md:grid-cols-2  md:w-auto md:gap-8 grid grid-cols-1  gap-8">
+          <div className="md:grid md:grid-cols-1  md:w-auto md:gap-8 grid grid-cols-1  gap-8">
 
-            <Card className="h-[320px] md:col-span-1 ">
+            {/* <Card className="h-[320px] md:col-span-1 ">
               <CardHeader
                 title="My Reads"
                 description="Explore what book I'm reading" />
               <div className="w-40 mx-auto mt-2">
                 <Image src={bookImage} alt="book cover" />
               </div>
-            </Card>
+            </Card> */}
 
             <Card className="h-[320px] md:col-span-2">
               <CardHeader title="Tech Toolbox" description="My favorite tools" />
-              <ToolboxItems className="mt-6" items={toolboxItem} itemWrapperClassName="animate-move-left [animation-duration:10s]" />
-              <ToolboxItems className="mt-6" items={toolboxItem} itemWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:10s]" />
+              <ToolboxItems className="mt-6" items={toolboxItem} itemWrapperClassName="animate-move-left [animation-duration:30s]" />
+              <ToolboxItems className="mt-6" items={toolboxItem} itemWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:30s]" />
             </Card>
           </div>
-
+ 
 
           <div className="md:grid-cols-2  md:grid grid grid-cols-1 gap-8  ">
             <Card className="h-[320px] p-0  flex flex-col md:col-span-2 ">

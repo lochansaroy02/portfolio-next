@@ -23,7 +23,7 @@ export default function Home() {
       <HeroSection id="home" />
       <ProjectsSection id="projects" />
       <TapeSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <AboutSection id="about" />
       <ContactSection id="contact" />
     </div>

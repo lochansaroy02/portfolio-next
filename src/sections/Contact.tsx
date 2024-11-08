@@ -1,6 +1,18 @@
+"use client"
 import ArrowUpIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 export const ContactSection = ({ id }: { id: string }) => {
+
+  const recipientEmail = "recipient@example.com";
+  const subject = "Subject Text Here";
+  const body = "Write your email body here.";
+
+
+  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+
+
+
   return (
     <div id={id} className="py-16 pt-12  lg:py-24 lg:pt-20   ">
       <div className="container">
@@ -22,12 +34,14 @@ export const ContactSection = ({ id }: { id: string }) => {
             </div>
 
             <div >
+              <div>
+                
+              </div>
 
               <button className="text-neutral-100 bg-neutral-900 inline-flex items-center px-6 h-12 rounded-xl gap-2  mt-8 w-max border border-neutral-950  ">
                 <span className="font-semibold ">
                   contact me
                 </span>
-
                 <ArrowUpIcon className="size-4 " />
               </button>
             </div>
