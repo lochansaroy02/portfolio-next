@@ -1,4 +1,4 @@
-import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg'
+import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg';
 
 export const Footer = () => {
 
@@ -26,7 +26,7 @@ export const Footer = () => {
           {
             linksArr.map((item, index) => (
 
-              <a className='inline-flex items-center gap-1.5  ' href={item.url}><span className='font-semibold '>{item.title} </span> <ArrowUpIcon className="size-4 " /></a>
+              <a key={index} className='inline-flex items-center gap-1.5  ' href={item.url}><span className='font-semibold '>{item.title} </span> <ArrowUpIcon className="size-4 " /></a>
 
             ))
           }
