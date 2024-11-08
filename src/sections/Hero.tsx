@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export const HeroSection = ({ id }: { id: string }) => {
   const handleClick = () => {
-    //write a code to download the pdf 
+
     const pdfUrl = '/assets/documents/Lochan_Kumar.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
@@ -92,12 +92,12 @@ export const HeroSection = ({ id }: { id: string }) => {
         </div>
 
         {/* Adjusted z-index for button */}
-        <div className="flex flex-col items-center mt-8 z-50 gap-4 md:flex-row md:justify-center">
+        <div className="flex flex-col items-center  mt-8 z-50 gap-4 md:flex-row md:justify-center">
           <button
             onClick={handleClick}
             className="inline-flex items-center gap-2 border lg:bg-neutral-600 text-neutral-900 font-semibold h-12 px-6 rounded-xl z-50 relative"
           >
-            <span className="hover:motion-safe:animate-wave lg:text-xl">👋</span>
+            <span className=" lg:text-xl">👋</span>
             <span>Hire me!</span>
           </button>
         </div>
