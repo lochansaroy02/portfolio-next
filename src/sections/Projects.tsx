@@ -11,7 +11,6 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
     year: "2022",
     title: "Todo App",
     results: [
@@ -31,7 +30,7 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://food-hub-lochansaroy02.vercel.app/",
     image: foodhub,
   },
   {
@@ -43,7 +42,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://netflixgpt-vert.vercel.app/",
     image: netflix,
   },
 ];
@@ -51,7 +50,7 @@ const portfolioProjects = [
 const sectionHeaders = {
   title: "Real-world Projects",
   eyebrow: "Featured Projects",
-  description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  description: "Explore my work ",
 };
 
 

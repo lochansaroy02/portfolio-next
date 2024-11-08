@@ -29,13 +29,13 @@ export const ContactSection = ({ id }: { id: string }) => {
             <div>
 
               <h2 className="font-serif text-2xl md:text-3xl  ">Lets create something amazing togather</h2>
-              <p className="text-sm md:text-base  mt-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsa rerum fuga!</p>
+              <p className="text-sm md:text-base  font-semibold  mt-2 ">Collaborate. Innovate. Elevate.</p>
 
             </div>
 
             <div >
               <div>
-                
+
               </div>
 
               <button className="text-neutral-100 bg-neutral-900 inline-flex items-center px-6 h-12 rounded-xl gap-2  mt-8 w-max border border-neutral-950  ">
