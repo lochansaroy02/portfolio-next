@@ -83,10 +83,10 @@ export const HeroSection = ({ id }: { id: string }) => {
         </div>
 
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+          <h1 className="font-serif text-2xl md:text-5xl text-center mt-8 tracking-wide">
             From Concept to Code, I Bring Your Ideas to Life
           </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
+          <p className="mt-4 text-lg lg:text-xl text-center text-white/60 md:text-lg">
             Full-stack web development with cutting-edge technologies like MERN, designed to enhance user experience and drive growth.
           </p>
         </div>

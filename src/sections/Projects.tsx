@@ -3,7 +3,6 @@ import netflix from '@/assets/images/netflix.png';
 import todo from '@/assets/images/todo.png';
 
 import ArrowUpIcon from '@/assets/icons/arrow-up-right.svg';
-import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 
 import Card from "@/components/Card";
 import { SectionHeaders } from "@/components/SectionHeaders";
@@ -13,11 +12,7 @@ const portfolioProjects = [
   {
     year: "2022",
     title: "Todo App",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
+    results: "TodoHive is a MERN-based to-do application enabling users to create, read, update, and delete tasks. It provides an intuitive interface for efficient task management, helping users stay organized effortlessly.",
     link: "https://todohive-vert.netlify.app/",
     image: todo,
   },
@@ -25,11 +20,7 @@ const portfolioProjects = [
     company: "Innovative Co",
     year: "2021",
     title: "FoodHub",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
+    results: "FoodHub is a responsive React app for exploring and ordering food, featuring category filtering, search, an accordion layout, shopping cart, live Swiggy API data, and Redux-based state management.",
     link: "https://food-hub-lochansaroy02.vercel.app/",
     image: foodhub,
   },
@@ -37,11 +28,7 @@ const portfolioProjects = [
     company: "Quantum Dynamics",
     year: "2023",
     title: "Netflix GPT",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
+    results: "Netflix GPT is a movie recommendation app using OpenAI’s GPT-3.5. Features include personalized recommendations, Firebase Authentication, Redux state management, and a responsive design with Tailwind CSS. Built with React.",
     link: "https://netflixgpt-vert.vercel.app/",
     image: netflix,
   },
@@ -83,17 +70,14 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                     </h3>
                     <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                     <ul className="flex flex-col gap-2 mt-4 md:mt-5">
-                      {projects.results.map((result, idx) => (
-                        <li
-                          key={idx}
-                          className="flex gap-2 text-sm md:text-base"
-                        >
-                          <CheckCircleIcon className="size-5 md:size-6" />
-                          <span className="text-sm text-white/50">
-                            {result.title}
-                          </span>
-                        </li>
-                      ))}
+                      <li
+                        className="flex gap-2 text-sm md:text-base"
+                      >
+
+                        <span className="text-sm lg:text-lg md:text-base text-white/50">
+                          {projects.results}
+                        </span>
+                      </li>
                     </ul>
                     <a href={projects.link}>
                       <button className="bg-white text-neutral-950 h-12 w-full md:w-auto px-4 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
@@ -105,11 +89,11 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                 </div>
 
                 {/* Image Content */}
-                <div className="lg:flex-1 md:mt-12 lg:rounded-lg ">
+                <div className="lg:flex-1 rounded-lg md:mt-12 lg:rounded-lg ">
                   <Image
                     src={projects.image}
                     alt={projects.title}
-                    className="-mb-4 lg:rounded-xl   mt-8 md:mt md:-mt-0 lg:mt-4 lg:w-auto lg:absolute lg:h-full lg:max-w-none"
+                    className="-mb-4 lg:rounded-xl rounded-lg  md:rounded-lg   mt-8 md:mt md:-mt-0 lg:mt-4 lg:w-auto lg:absolute lg:h-full lg:max-w-none"
                   />
                 </div>
               </div>
