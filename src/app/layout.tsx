@@ -9,8 +9,9 @@ const calistoga = Calistoga({
   variable: '--font-serif',
   weight: ["400"]
 })
+
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Lochan Saroy",
   description: "Created with the help of Frontend Tribe",
 };
 

@@ -20,7 +20,7 @@ export const HeroSection = ({ id }: { id: string }) => {
   return (
     <div id={id} className="py-28 md:py-48 lg:py-60 relative overflow-x-clip">
       <div
-        className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]"
+        className="absolute inset-0 -z-20  [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]"
         style={{
           maskImage: "linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)",
         }}
@@ -71,7 +71,7 @@ export const HeroSection = ({ id }: { id: string }) => {
         </HeroOrbit>
       </div>
 
-      <div className="container z-40 ">
+      <div className="container  ">
         <div className="flex flex-col items-center">
           <Image src={memojiIMage} className="size-[200px]" alt="Picture of the author" />
           <div className="bg-neutral-950 border border-neutral-800 px-4 py-1.5 inline-flex gap-4 rounded-xl items-center">
@@ -92,10 +92,10 @@ export const HeroSection = ({ id }: { id: string }) => {
         </div>
 
         {/* Adjusted z-index for button */}
-        <div className="flex flex-col items-center  mt-8 z-50 gap-4 md:flex-row md:justify-center">
+        <div className="flex flex-col items-center  mt-8  gap-4 md:flex-row md:justify-center">
           <button
             onClick={handleClick}
-            className="inline-flex items-center gap-2 border bg-neutral-600 text-neutral-900 font-semibold h-12 px-6 rounded-xl z-50 relative"
+            className="inline-flex items-center gap-2 border bg-neutral-600 text-neutral-900 font-semibold h-12 px-6 rounded-xl "
           >
             <span className=" lg:text-xl">👋</span>
             <span>Hire me!</span>
